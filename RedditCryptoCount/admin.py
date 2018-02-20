@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import LastCount, CheckedPosts
 
-# Register your models here.
+admin.site.register(LastCount)
+admin.site.register(CheckedPosts)

@@ -1,0 +1,57 @@
+<html>
+	<a href="{% url 'update_coin_list' %}">Update Count</a>
+	<br /><br />
+	<table border="1">
+		<thead>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Symbol</td>
+			<td>This Count</td>
+			<td>Last Count</td>
+			<td>% Diff</td>
+			<td>-0.5hrs</td>
+			<td>-1hr</td>
+			<td>-1.5hrs</td>
+			<td>-2hrs</td>
+			<td>-2.5hrs</td>
+		</thead>
+		{% for row in table %}
+			<tr>
+				<td>
+					{{ row.coin_id }}
+				</td>
+				<td>
+					{{ row.coin_name }}
+				</td>
+				<td>
+					{{ row.coin_symbol }}
+				</td>
+				<td>
+					{{ row.thiscount }}
+				</td>
+				<td>
+					{{ row.lastcount }}
+				</td>
+				<td>
+					{{ row.pc_diff }}
+				</td>
+				<td>
+					{{ row.lastcount2 }}
+				</td>
+				<td>
+					{{ row.lastcount3 }}
+				</td>
+				<td>
+					{{ row.lastcount4 }}
+				</td>
+				<td>
+					{{ row.lastcount5 }}
+				</td>
+				<td>
+					{{ row.lastcount6 }}
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+	
+</html>
